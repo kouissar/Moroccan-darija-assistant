@@ -1,0 +1,7 @@
+[theme]
+# A dark blue theme with a yellow accent color
+primaryColor = "#FFD700"
+backgroundColor = "#0F2027"
+secondaryBackgroundColor = "#203A43"
+textColor = "#FFFFFF"
+font = "sans serif"
