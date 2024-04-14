@@ -1,2 +1,3 @@
 streamlit==1.28.2
 transformers==4.35.2
+tensorflow==2.13.0
