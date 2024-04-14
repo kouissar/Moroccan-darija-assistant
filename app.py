@@ -1,7 +1,6 @@
 import streamlit as st
 from transformers import pipeline
 
-
 st.set_page_config(page_title="Moroccan Darija Assistant App", page_icon="🇲🇦")
 
 # Create a Streamlit app title
