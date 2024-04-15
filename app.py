@@ -9,8 +9,8 @@ st.set_page_config(page_title="Moroccan Darija Assistant App", page_icon="ðŸ‡²ðŸ
 # Create a Streamlit app title
 st.title("Darija Assistant App")
 col1, col2 = st.columns(2)
-model= col2.selectbox('Select a model', options=['Vrspi/EnglishToDarija', 'lachkarsalim/Helsinki-translation-en-moroccann_darija', 'Trabis/Helsinki-NLPopus-mt-tc-big-en-moroccain_dialect'])
-task= col1.selectbox('Select a task', options=['text2text-generation', 'translation'])
+model= col2.selectbox('Select a model', options=['Vrspi/EnglishToDarija', 'lachkarsalim/Helsinki-translation-en-moroccann_darija' ])
+task= col1.selectbox('Select a task', options=['text2text-generation'])
 
 # Introduction and Instructions
 st.write(
