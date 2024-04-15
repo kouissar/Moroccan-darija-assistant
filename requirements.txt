@@ -76,4 +76,6 @@ urllib3==2.2.1
 validators==0.28.0
 Werkzeug==3.0.2
 wrapt==1.16.0
-zipp==3.18.1
+zipp==3.18.
+sentencepiece==0.1.99
+torch==2.0.1
