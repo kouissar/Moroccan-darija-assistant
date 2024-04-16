@@ -3,7 +3,6 @@ from transformers import pipeline
 
 
 
-
 st.set_page_config(page_title="Moroccan Darija Assistant App", page_icon="🇲🇦")
 
 # Create a Streamlit app title
@@ -24,10 +23,12 @@ st.write(
 text = st.text_area("Enter English text to translate to Moroccan Arabic (Darija):", "")
 
 
-
 # create the pipeline
-classifier  = pipeline(task, model=model)
-
+@st.cache_resource
+def run_model(task, model, text):
+    classifier  = pipeline(task, model=model)
+    response = classifier(text)
+    return response
 
 
 # Perform classification when the user clicks the button
@@ -38,7 +39,7 @@ if st.button("Translate"):
     #     st.warning("Please enter at least one label for classification.")
     else:
         # Perform zero-shot classification
-        result = classifier(text)
+        result = run_model(task, model, text)
 
         # Display the results in a table
         st.subheader("Translation Results:")
