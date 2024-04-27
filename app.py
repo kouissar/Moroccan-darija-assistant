@@ -7,18 +7,10 @@ st.set_page_config(page_title="Moroccan Darija Assistant App", page_icon="ðŸ‡²ðŸ
 
 # Create a Streamlit app title
 st.title("Darija Assistant App")
+st.caption("This app uses Hugging Face's Transformers library to perform English to Moroccan Darija translation with transliteration option")
 
 # Header Section 
-with st.container():
-    st.subheader("Hi, I am Rafik :wave:")
-    st.write("A Software Engineer From Maryland, USA")
-    # Introduction and Instructions
-    st.caption(
-    '''This app uses Hugging Face's Transformers library to perform English to Moroccan Darija translation 
-    with transliteration option. Credit goes to pretrained models providers which can be found at huggingface hub using model tag.
-    Checkout my blog for more about my work: https://techwithrafik.wordpress.com/
-    Should you be interested in contributing, checkout project github page: https://github.com/kouissar/Moroccan-darija-assistant'''
-)
+
     # st.write("I am a highly motivated professional with a passion for coding, music, and outdoor adventures. In my free time, I enjoy hiking and camping in the great outdoors, as well as playing and composing music. I am always looking for new challenges and ways to learn and grow, both personally and professionally. Whether I'm coding a new software application or exploring the wilderness, I am driven by my love of problem-solving and creation.")
     #sp.speak("Hi, I am Rafik. A Software Engineer From USA.I am passionate about coding, fishing, and music. What about you? ")
 
@@ -60,3 +52,13 @@ if st.button("Translate"):
         st.info(result[0]['generated_text'])
 
 # Add clear button
+st.write("---")
+
+with st.container():
+    st.subheader("Hi, I am Rafik :wave:")
+    st.write("A Software Engineer From Maryland, USA")
+    # Introduction and Instructions
+    st.caption(
+    '''Credit goes to pretrained models providers which can be found at huggingface hub using model tag.
+    Checkout my blog for more about my work: https://techwithrafik.wordpress.com/.''')
+    st.caption("If you are interested in contributing, checkout project github page: https://github.com/kouissar/Moroccan-darija-assistant")
