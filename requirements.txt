@@ -79,3 +79,4 @@ wrapt==1.16.0
 zipp==3.18.
 sentencepiece==0.1.99
 torch==2.0.1
+streamlit-lottie==0.0.5
